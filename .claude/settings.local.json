@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"C:/Users/rapma/Documents/marketing el susurro dle tiempo/imagenes promo susurro del tiempo\" 2>&1 | head -60)",
+      "Bash(ls -la \"C:/Users/rapma/Documents/WEB PROJECTS/Cinematographic and analog movie studio template\" 2>&1 | head -40)"
+    ]
+  }
+}

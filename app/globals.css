@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   DESIGN SYSTEM — EL SUSURRO DEL TIEMPO (PDF oficial, fidelidad estricta)
+   ========================================================================== */
+@theme {
+  --color-parchment: #F4F0EA;   /* bg-primary    — Warm Parchment  */
+  --color-paper: #EFEAE1;       /* bg-secondary  — Aged Paper      */
+  --color-sumi: #2B2B2A;        /* text-primary  — Sumi Ink        */
+  --color-burgundy: #7A3B43;    /* accent-1      — Burgundy        */
+  --color-sakura: #E8C5C8;      /* accent-2      — Sakura Blush    */
+  --color-slate-mute: #3A5255;  /* contrast      — Muted Teal      */
+
+  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-body: var(--font-eb), Georgia, serif;
+
+  --ease-out-smooth: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+/* El telón de carga bloquea el scroll del body y eso hace desaparecer la barra
+   de desplazamiento: sin reservar el hueco, al soltarlo cambia el ancho del
+   viewport y todo lo medido en `vw` — las columnas de la galería, el ancho del
+   carril de reliquias — se recalcula por debajo de los `pin` ya establecidos. */
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  background-color: var(--color-parchment);
+  color: var(--color-sumi);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-sakura);
+  color: var(--color-sumi);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-burgundy);
+  outline-offset: 3px;
+}
+
+/* ── Custom cursor (Sumi ink drop) ─────────────────────────────────────── */
+/* Dos capas a propósito. La exterior sólo recibe el `transform` que escribe
+   GSAP para seguir al puntero; la interior es la que crece. Antes se animaban
+   `width` y `height`, que obligan a recalcular diseño y repintar en cada
+   fotograma; y no basta con mover la escala a la capa exterior, porque la
+   propiedad `scale` se compone antes que `transform` y acabaría multiplicando
+   también el desplazamiento del cursor. */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  pointer-events: none;
+  z-index: 9999;
+}
+.custom-cursor-dot {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-parchment);
+  border-radius: 50%;
+  border: 1px solid transparent;
+  /* Invierte lo que tiene debajo. Con un punto sumi fijo, el cursor
+     desaparecía por completo sobre el pie y sobre los paneles de video —y
+     `cursor: none` había retirado también el del sistema. */
+  mix-blend-mode: difference;
+  scale: 0.375;
+  transition:
+    scale 0.3s var(--ease-out-smooth),
+    background-color 0.3s,
+    border-color 0.3s;
+}
+.custom-cursor.is-hover .custom-cursor-dot {
+  scale: 1;
+  background-color: rgba(255, 255, 255, 0.14);
+  border-color: var(--color-parchment);
+}
+
+/* Salida de emergencia: quien necesite el puntero del sistema lo recupera sin
+   tener que desactivar JavaScript. */
+@media (prefers-reduced-motion: reduce), (prefers-contrast: more) {
+  .custom-cursor {
+    display: none;
+  }
+  html.cursor-active,
+  html.cursor-active * {
+    cursor: auto;
+  }
+}
+@media (pointer: fine) {
+  html.cursor-active,
+  html.cursor-active * {
+    cursor: none;
+  }
+}
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .custom-cursor {
+    display: none;
+  }
+}
+
+/* ── Scroll hint ───────────────────────────────────────────────────────── */
+@keyframes hint-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(6px); }
+}
+.scroll-hint {
+  display: inline-block;
+  animation: hint-float 1.8s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-hint {
+    animation: none;
+  }
+}
+
+/* ── Filas de contacto del pie ───────────────────────────────────────────────
+   Por defecto se apilan etiqueta y dato: así el dato existe en táctil, con
+   teclado y sin JavaScript. Sólo donde hay un puntero de verdad se convierte
+   en el intercambio deslizante, que además responde al foco y no sólo al
+   hover.                                                                     */
+@media (hover: hover) and (pointer: fine) {
+  .foot-fila .foot-etiqueta,
+  .foot-fila .foot-dato {
+    transition: transform 0.5s var(--ease-out-smooth), opacity 0.5s var(--ease-out-smooth);
+  }
+  .foot-fila .foot-dato {
+    position: absolute;
+    /* `top: 0` es imprescindible. Sin él, el dato se coloca en su posición
+       estática —debajo de la etiqueta— y al subir a `translateY(0)` seguía
+       cayendo fuera de la caja recortada: el hover vaciaba la fila en vez de
+       revelar el correo. */
+    top: 0;
+    inset-inline: 0;
+    font-size: 1em;
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  .foot-fila:hover .foot-etiqueta,
+  .foot-fila:focus-within .foot-etiqueta {
+    transform: translateY(-110%);
+    opacity: 0;
+  }
+  .foot-fila:hover .foot-dato,
+  .foot-fila:focus-within .foot-dato {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .foot-fila > a,
+  .foot-fila > div {
+    position: relative;
+    display: block;
+    overflow: hidden;
+  }
+}
+
+/* ── Movimiento reducido ────────────────────────────────────────────────────
+   Los hooks de GSAP se cortan antes de animar cuando la preferencia está
+   activa, así que el estado por defecto del marcado tiene que ser ya legible.
+   La regla es: el HTML nace en su forma estática y es GSAP quien lo pone en
+   posición de salida. Aquí sólo se deshacen los recortes de pantalla.        */
+
+/* El velo del video arranca invisible; Gallery.tsx lo enciende únicamente si
+   va a animarlo. Sin animación queda el muro de placas, que es lo legible. */
+.gal-overlay {
+  opacity: 0;
+}
+.gal-static-note {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Las transiciones CSS no pasan por GSAP y por tanto se escapaban de las
+     guardas de los hooks: el header, el menú móvil, las filas del pie y las
+     tarjetas de pasajes seguían animándose. */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* La vitrina deja de ser un carril lateral y se apila en rejilla. */
+  .reliquias-stage {
+    height: auto !important;
+    overflow: visible !important;
+    padding-block: 6rem;
+  }
+  .reliquias-track {
+    flex-wrap: wrap;
+    width: 100% !important;
+    justify-content: center;
+  }
+  .reliquias-track > .reliquia {
+    margin-top: 0 !important;
+  }
+
+  /* La galería se queda en el muro de placas, con su pie de sección visible. */
+  .gallery-stage {
+    height: auto !important;
+    overflow: visible !important;
+    padding-block: 6rem;
+  }
+  .gallery-stage .gal-wall {
+    position: static !important;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .gal-static-note {
+    display: block;
+  }
+
+  /* El foco deja de fijarse: el póster y el titular bastan. */
+  .foco-stage {
+    height: 70vh;
+  }
+}

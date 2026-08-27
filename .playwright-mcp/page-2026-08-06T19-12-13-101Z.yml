@@ -1,0 +1,46 @@
+- generic [active] [ref=f6e1]:
+  - banner [ref=f6e2]:
+    - button "El Susurro del Tiempo — ir al inicio" [ref=f6e3]:
+      - generic [ref=f6e4]: El Susurro del Tiempo
+    - navigation "Navegación principal" [ref=f6e5]:
+      - list [ref=f6e6]:
+        - listitem [ref=f6e7]:
+          - button "Manifiesto" [ref=f6e8]
+        - listitem [ref=f6e9]:
+          - button "Capítulos" [ref=f6e10]
+        - listitem [ref=f6e11]:
+          - button "Pasajes" [ref=f6e12]
+        - listitem [ref=f6e13]:
+          - button "Contacto" [ref=f6e14]
+  - main [ref=f6e15]:
+    - generic [ref=f6e16]:
+      - img "Arco renacentista con engranajes y reloj de arena"
+      - img "Arco renacentista con engranajes"
+      - heading "Una vida, un libro" [level=1] [ref=f6e18]
+    - generic [ref=f6e40]:
+      - article [ref=f6e41]:
+        - generic [ref=f6e42]:
+          - generic: "01"
+          - 'img "Arco renacentista: el origen de las horas" [ref=f6e43]'
+      - article [ref=f6e44]:
+        - generic [ref=f6e45]:
+          - generic: "02"
+          - 'img "Paisaje de las eras: la danza de los engranajes" [ref=f6e46]'
+      - article [ref=f6e47]:
+        - generic [ref=f6e48]:
+          - generic: "03"
+          - 'img "Constelaciones y manuscritos: el susurro estelar" [ref=f6e49]'
+    - generic [ref=f6e53]:
+      - paragraph [ref=f6e54]: Relatos
+      - heading "Capítulos del tiempo" [level=2] [ref=f6e55]
+      - list [ref=f6e56]
+    - generic [ref=f6e57]:
+      - paragraph [ref=f6e58]: Pasajes
+      - heading "Lo que el tiempo susurra" [level=2] [ref=f6e59]
+  - contentinfo [ref=f6e61]:
+    - img "Esfera armilar — el ciclo se cierra" [ref=f6e65]
+    - generic [ref=f6e67]:
+      - generic [ref=f6e68]: El Susurro del Tiempo © MMXXVI
+      - generic [ref=f6e69]: Una vida, un libro — Recuperar la memoria
+  - button "Open Next.js Dev Tools" [ref=f6e75] [cursor=pointer]
+  - alert [ref=f6e79]

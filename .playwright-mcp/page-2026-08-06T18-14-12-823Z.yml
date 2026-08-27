@@ -1,0 +1,66 @@
+- generic [active] [ref=f3e1]:
+  - banner [ref=f3e2]:
+    - button "El Susurro del Tiempo — ir al inicio" [ref=f3e3]:
+      - generic [ref=f3e4]: El Susurro del Tiempo
+    - navigation "Navegación principal" [ref=f3e5]:
+      - list [ref=f3e6]:
+        - listitem [ref=f3e7]:
+          - button "Manifiesto" [ref=f3e8]
+        - listitem [ref=f3e9]:
+          - button "Capítulos" [ref=f3e10]
+        - listitem [ref=f3e11]:
+          - button "Pasajes" [ref=f3e12]
+        - listitem [ref=f3e13]:
+          - button "Contacto" [ref=f3e14]
+  - main [ref=f3e15]:
+    - generic [ref=f3e16]:
+      - img "Arco renacentista con engranajes y reloj de arena"
+      - img "Esfera armilar con planetas y constelaciones"
+      - generic [ref=f3e17]:
+        - generic [ref=f3e18]: VIII · VI · MMXXVI
+        - heading "Una vida, un libro" [level=1] [ref=f3e19]:
+          - generic [ref=f3e104]:
+            - generic [ref=f3e105]: U
+            - generic [ref=f3e107]: "n"
+            - generic [ref=f3e109]: a
+          - generic [ref=f3e111]:
+            - generic [ref=f3e112]: v
+            - generic [ref=f3e114]: i
+            - generic [ref=f3e116]: d
+            - generic [ref=f3e118]: a
+            - generic [ref=f3e120]: ","
+          - generic [ref=f3e122]:
+            - generic [ref=f3e123]: u
+            - generic [ref=f3e125]: "n"
+          - generic [ref=f3e127]:
+            - generic [ref=f3e128]: l
+            - generic [ref=f3e130]: i
+            - generic [ref=f3e132]: b
+            - generic [ref=f3e134]: r
+            - generic [ref=f3e136]: o
+        - paragraph [ref=f3e20]: Recuperar la memoria
+        - generic [ref=f3e21]:
+          - generic [ref=f3e22]: Desliza
+          - generic [ref=f3e23]: ↓
+    - generic [ref=f3e25]:
+      - article [ref=f3e26]:
+        - img "Isla flotante renacentista con astrónomo, telescopio y manuscritos" [ref=f3e29]
+      - article [ref=f3e31]:
+        - img "Isla flotante industrial con engranajes y una bailarina" [ref=f3e34]
+      - article [ref=f3e36]:
+        - generic:
+          - img "Isla flotante cósmica con ciudad, cohete y Saturno"
+    - generic [ref=f3e45]:
+      - paragraph [ref=f3e46]: Relatos
+      - heading "Capítulos del tiempo" [level=2] [ref=f3e47]
+      - list [ref=f3e48]
+    - generic [ref=f3e65]:
+      - paragraph [ref=f3e66]: Pasajes
+      - heading "Lo que el tiempo susurra" [level=2] [ref=f3e67]
+  - contentinfo [ref=f3e85]:
+    - img "Esfera armilar — el ciclo se cierra" [ref=f3e99]
+    - generic [ref=f3e101]:
+      - generic [ref=f3e102]: El Susurro del Tiempo © MMXXVI
+      - generic [ref=f3e103]: Una vida, un libro — Recuperar la memoria
+  - button "Open Next.js Dev Tools" [ref=f3e144] [cursor=pointer]
+  - alert [ref=f3e148]

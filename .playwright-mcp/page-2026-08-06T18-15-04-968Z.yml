@@ -1,0 +1,106 @@
+- generic [active] [ref=f4e1]:
+  - banner [ref=f4e2]:
+    - button "El Susurro del Tiempo — ir al inicio" [ref=f4e3]:
+      - generic [ref=f4e4]: El Susurro del Tiempo
+    - navigation "Navegación principal" [ref=f4e5]:
+      - list [ref=f4e6]:
+        - listitem [ref=f4e7]:
+          - button "Manifiesto" [ref=f4e8]
+        - listitem [ref=f4e9]:
+          - button "Capítulos" [ref=f4e10]
+        - listitem [ref=f4e11]:
+          - button "Pasajes" [ref=f4e12]
+        - listitem [ref=f4e13]:
+          - button "Contacto" [ref=f4e14]
+  - main [ref=f4e15]:
+    - generic [ref=f4e16]:
+      - img "Arco renacentista con engranajes y reloj de arena"
+      - img "Esfera armilar con planetas y constelaciones"
+      - generic [ref=f4e17]:
+        - generic [ref=f4e18]: VIII · VI · MMXXVI
+        - heading "Una vida, un libro" [level=1] [ref=f4e19]
+        - paragraph [ref=f4e20]: Recuperar la memoria
+        - generic [ref=f4e21]:
+          - generic [ref=f4e22]: Desliza
+          - generic [ref=f4e23]: ↓
+    - generic [ref=f4e25]:
+      - article [ref=f4e26]:
+        - generic [ref=f4e27]: "01"
+        - img "Isla flotante renacentista con astrónomo, telescopio y manuscritos" [ref=f4e29]
+        - heading "Capítulo I — El Origen de las Horas" [level=3] [ref=f4e30]
+      - article [ref=f4e31]:
+        - generic [ref=f4e32]: "02"
+        - img "Isla flotante industrial con engranajes y una bailarina" [ref=f4e34]
+        - heading "Capítulo II — La Danza de los Engranajes" [level=3] [ref=f4e35]
+      - article [ref=f4e36]:
+        - generic [ref=f4e37]: "03"
+        - img "Isla flotante cósmica con ciudad, cohete y Saturno" [ref=f4e39]
+        - heading "Capítulo III — El Susurro Estelar" [level=3] [ref=f4e40]
+    - generic [ref=f4e43]:
+      - paragraph [ref=f4e44]: Manifiesto
+      - heading "Cada adulto mayor guarda un mundo de historias que corre el riesgo de perderse con el tiempo." [level=2] [ref=f4e45]
+      - button "Escríbenos" [ref=f4e46]
+    - generic [ref=f4e47]:
+      - paragraph [ref=f4e48]: Relatos
+      - heading "Capítulos del tiempo" [level=2] [ref=f4e49]
+      - list [ref=f4e50]:
+        - listitem [ref=f4e51]:
+          - generic [ref=f4e52]: María Eugenia — 84 años
+          - paragraph [ref=f4e53]: "De la sierra a la ciudad: sesenta años de oficio, radio y memoria."
+          - generic [ref=f4e54]: ↗
+          - generic:
+            - text: "01"
+            - paragraph: "De la sierra a la ciudad: sesenta años de oficio, radio y memoria."
+        - listitem [ref=f4e55]:
+          - generic [ref=f4e56]: Rafael — 79 años
+          - paragraph [ref=f4e57]: El relojero que reparó el tiempo de tres generaciones.
+          - generic [ref=f4e58]: ↗
+          - generic:
+            - text: "02"
+            - paragraph: El relojero que reparó el tiempo de tres generaciones.
+        - listitem [ref=f4e59]:
+          - generic [ref=f4e60]: Carmen — 91 años
+          - paragraph [ref=f4e61]: Cartas de guerra, recetas manuscritas y un jardín que aún florece.
+          - generic [ref=f4e62]: ↗
+          - generic:
+            - text: "03"
+            - paragraph: Cartas de guerra, recetas manuscritas y un jardín que aún florece.
+        - listitem [ref=f4e63]:
+          - generic [ref=f4e64]: Antonio — 77 años
+          - paragraph [ref=f4e65]: El tren, la fábrica y la primera radio del barrio.
+          - generic [ref=f4e66]: ↗
+          - generic:
+            - text: "04"
+            - paragraph: El tren, la fábrica y la primera radio del barrio.
+    - generic [ref=f4e67]:
+      - paragraph [ref=f4e68]: Pasajes
+      - heading "Lo que el tiempo susurra" [level=2] [ref=f4e69]
+      - generic [ref=f4e70]:
+        - figure "Jorge Luis Borges" [ref=f4e71]:
+          - blockquote [ref=f4e73]: “El tiempo es un río que me arrebata, pero yo soy el río.”
+        - figure "San Agustín" [ref=f4e75]:
+          - blockquote [ref=f4e77]: “¿Qué es el tiempo? Si nadie me lo pregunta, lo sé; si quiero explicarlo, no lo sé.”
+        - figure "William Faulkner" [ref=f4e79]:
+          - blockquote [ref=f4e81]: “El pasado nunca muere. Ni siquiera es pasado.”
+        - figure "Heráclito" [ref=f4e83]:
+          - blockquote [ref=f4e85]: “Todo fluye, nada permanece.”
+  - contentinfo [ref=f4e87]:
+    - generic [ref=f4e88]:
+      - generic [ref=f4e89]:
+        - paragraph [ref=f4e90]: Contacto
+        - heading [level=2] [ref=f4e91]:
+          - text: El tiempo susurra.
+          - emphasis [ref=f4e92]: Escuchémoslo juntos.
+        - generic [ref=f4e93]:
+          - text: Recibe noticias del proyecto
+          - generic [ref=f4e94]:
+            - textbox "Recibe noticias del proyecto" [ref=f4e95]:
+              - /placeholder: tu@correo.com
+            - button "Unirme" [ref=f4e96]
+        - paragraph [ref=f4e98]:
+          - link "hola@elsusurrodelTiempo.com" [ref=f4e99] [cursor=pointer]:
+            - /url: mailto:hola@elsusurrodelTiempo.com
+      - img "Esfera armilar — el ciclo se cierra" [ref=f4e101]
+    - generic [ref=f4e103]:
+      - generic [ref=f4e104]: El Susurro del Tiempo © MMXXVI
+      - generic [ref=f4e105]: Una vida, un libro — Recuperar la memoria

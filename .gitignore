@@ -1,0 +1,26 @@
+node_modules/
+.next/
+out/
+dist/
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+.env*.local
+data/
+
+# Archivos de marketing (demasiado grandes para GitHub)
+marketing*/
+marketing*/
+
+# Exports (reels, videos — pesan GB)
+exports/
+
+# Screenshots locales
+shots/
+shots-footer/
+shots-mobile/
+
+# Skills y agentes locales
+Skills/
+Agents/
+REV INGENERING IDEA/

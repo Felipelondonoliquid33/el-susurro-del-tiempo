@@ -1,0 +1,662 @@
+[
+  {
+    "slug": "paisaje-rio",
+    "src": "/assets/archive/paisaje-rio.webp",
+    "thumb": "/assets/archive/paisaje-rio@sm.webp",
+    "w": 2400,
+    "h": 1642,
+    "origin": "1-3/28.jpg",
+    "originSize": [
+      4864,
+      3328
+    ]
+  },
+  {
+    "slug": "paisaje-puente",
+    "src": "/assets/archive/paisaje-puente.webp",
+    "thumb": "/assets/archive/paisaje-puente@sm.webp",
+    "w": 1209,
+    "h": 701,
+    "origin": "1-3/20.jpg",
+    "originSize": [
+      1209,
+      701
+    ]
+  },
+  {
+    "slug": "paisaje-lomas",
+    "src": "/assets/archive/paisaje-lomas.webp",
+    "thumb": "/assets/archive/paisaje-lomas@sm.webp",
+    "w": 1164,
+    "h": 704,
+    "origin": "1-3/15.jpg",
+    "originSize": [
+      1164,
+      704
+    ]
+  },
+  {
+    "slug": "paisaje-arboleda",
+    "src": "/assets/archive/paisaje-arboleda.webp",
+    "thumb": "/assets/archive/paisaje-arboleda@sm.webp",
+    "w": 1529,
+    "h": 993,
+    "origin": "1-3/10.jpg",
+    "originSize": [
+      1529,
+      993
+    ]
+  },
+  {
+    "slug": "paisaje-quebrada",
+    "src": "/assets/archive/paisaje-quebrada.webp",
+    "thumb": "/assets/archive/paisaje-quebrada@sm.webp",
+    "w": 2000,
+    "h": 2441,
+    "origin": "1-3/16.jpg",
+    "originSize": [
+      2592,
+      3164
+    ]
+  },
+  {
+    "slug": "paisaje-vias",
+    "src": "/assets/archive/paisaje-vias.webp",
+    "thumb": "/assets/archive/paisaje-vias@sm.webp",
+    "w": 1160,
+    "h": 717,
+    "origin": "5/4.jpg",
+    "originSize": [
+      1160,
+      717
+    ]
+  },
+  {
+    "slug": "paisaje-bosque",
+    "src": "/assets/archive/paisaje-bosque.webp",
+    "thumb": "/assets/archive/paisaje-bosque@sm.webp",
+    "w": 1189,
+    "h": 688,
+    "origin": "4/2.jpg",
+    "originSize": [
+      1189,
+      688
+    ]
+  },
+  {
+    "slug": "paisaje-valle",
+    "src": "/assets/archive/paisaje-valle.webp",
+    "thumb": "/assets/archive/paisaje-valle@sm.webp",
+    "w": 1103,
+    "h": 734,
+    "origin": "6/8.jpg",
+    "originSize": [
+      1103,
+      734
+    ]
+  },
+  {
+    "slug": "paisaje-caserio",
+    "src": "/assets/archive/paisaje-caserio.webp",
+    "thumb": "/assets/archive/paisaje-caserio@sm.webp",
+    "w": 1156,
+    "h": 683,
+    "origin": "10/1.jpg",
+    "originSize": [
+      1156,
+      683
+    ]
+  },
+  {
+    "slug": "gente-pareja-roca",
+    "src": "/assets/archive/gente-pareja-roca.webp",
+    "thumb": "/assets/archive/gente-pareja-roca@sm.webp",
+    "w": 1298,
+    "h": 1748,
+    "origin": "7/11.jpg",
+    "originSize": [
+      1298,
+      1748
+    ]
+  },
+  {
+    "slug": "gente-rio",
+    "src": "/assets/archive/gente-rio.webp",
+    "thumb": "/assets/archive/gente-rio@sm.webp",
+    "w": 1002,
+    "h": 714,
+    "origin": "5/14.jpg",
+    "originSize": [
+      1002,
+      714
+    ]
+  },
+  {
+    "slug": "gente-familia-casa",
+    "src": "/assets/archive/gente-familia-casa.webp",
+    "thumb": "/assets/archive/gente-familia-casa@sm.webp",
+    "w": 868,
+    "h": 598,
+    "origin": "8/1.jpg",
+    "originSize": [
+      868,
+      598
+    ]
+  },
+  {
+    "slug": "gente-dos-hombres",
+    "src": "/assets/archive/gente-dos-hombres.webp",
+    "thumb": "/assets/archive/gente-dos-hombres@sm.webp",
+    "w": 982,
+    "h": 1508,
+    "origin": "8/3.jpg",
+    "originSize": [
+      982,
+      1508
+    ]
+  },
+  {
+    "slug": "gente-jinete",
+    "src": "/assets/archive/gente-jinete.webp",
+    "thumb": "/assets/archive/gente-jinete@sm.webp",
+    "w": 1600,
+    "h": 1666,
+    "origin": "8/5.jpg",
+    "originSize": [
+      2139,
+      2227
+    ]
+  },
+  {
+    "slug": "gente-mujeres",
+    "src": "/assets/archive/gente-mujeres.webp",
+    "thumb": "/assets/archive/gente-mujeres@sm.webp",
+    "w": 1225,
+    "h": 704,
+    "origin": "4/6.jpg",
+    "originSize": [
+      1225,
+      704
+    ]
+  },
+  {
+    "slug": "gente-grupo",
+    "src": "/assets/archive/gente-grupo.webp",
+    "thumb": "/assets/archive/gente-grupo@sm.webp",
+    "w": 573,
+    "h": 735,
+    "origin": "9/18.jpg",
+    "originSize": [
+      573,
+      735
+    ]
+  },
+  {
+    "slug": "gente-hermanos",
+    "src": "/assets/archive/gente-hermanos.webp",
+    "thumb": "/assets/archive/gente-hermanos@sm.webp",
+    "w": 995,
+    "h": 1167,
+    "origin": "9/15.jpg",
+    "originSize": [
+      995,
+      1167
+    ]
+  },
+  {
+    "slug": "gente-bautizo",
+    "src": "/assets/archive/gente-bautizo.webp",
+    "thumb": "/assets/archive/gente-bautizo@sm.webp",
+    "w": 467,
+    "h": 593,
+    "origin": "31/8.jpeg",
+    "originSize": [
+      467,
+      593
+    ]
+  },
+  {
+    "slug": "retrato-senora",
+    "src": "/assets/archive/retrato-senora.webp",
+    "thumb": "/assets/archive/retrato-senora@sm.webp",
+    "w": 1100,
+    "h": 1623,
+    "origin": "9/9.jpg",
+    "originSize": [
+      1184,
+      1747
+    ]
+  },
+  {
+    "slug": "retrato-joven",
+    "src": "/assets/archive/retrato-joven.webp",
+    "thumb": "/assets/archive/retrato-joven@sm.webp",
+    "w": 1200,
+    "h": 1636,
+    "origin": "8/4.jpg",
+    "originSize": [
+      1962,
+      2675
+    ]
+  },
+  {
+    "slug": "retrato-dos-mujeres",
+    "src": "/assets/archive/retrato-dos-mujeres.webp",
+    "thumb": "/assets/archive/retrato-dos-mujeres@sm.webp",
+    "w": 1400,
+    "h": 890,
+    "origin": "11/4.jpg",
+    "originSize": [
+      1948,
+      1238
+    ]
+  },
+  {
+    "slug": "retrato-nina",
+    "src": "/assets/archive/retrato-nina.webp",
+    "thumb": "/assets/archive/retrato-nina@sm.webp",
+    "w": 1100,
+    "h": 1467,
+    "origin": "31/1.jpeg",
+    "originSize": [
+      1200,
+      1600
+    ]
+  },
+  {
+    "slug": "retrato-mujer-silla",
+    "src": "/assets/archive/retrato-mujer-silla.webp",
+    "thumb": "/assets/archive/retrato-mujer-silla@sm.webp",
+    "w": 669,
+    "h": 1167,
+    "origin": "13/1.jpg",
+    "originSize": [
+      669,
+      1167
+    ]
+  },
+  {
+    "slug": "retrato-novia",
+    "src": "/assets/archive/retrato-novia.webp",
+    "thumb": "/assets/archive/retrato-novia@sm.webp",
+    "w": 460,
+    "h": 634,
+    "origin": "13/2.jpg",
+    "originSize": [
+      464,
+      640
+    ]
+  },
+  {
+    "slug": "campo-caballos",
+    "src": "/assets/archive/campo-caballos.webp",
+    "thumb": "/assets/archive/campo-caballos@sm.webp",
+    "w": 866,
+    "h": 850,
+    "origin": "5/8.jpg",
+    "originSize": [
+      866,
+      850
+    ]
+  },
+  {
+    "slug": "campo-vaca",
+    "src": "/assets/archive/campo-vaca.webp",
+    "thumb": "/assets/archive/campo-vaca@sm.webp",
+    "w": 900,
+    "h": 864,
+    "origin": "1-3/8.jpg",
+    "originSize": [
+      901,
+      865
+    ]
+  },
+  {
+    "slug": "campo-yunta",
+    "src": "/assets/archive/campo-yunta.webp",
+    "thumb": "/assets/archive/campo-yunta@sm.webp",
+    "w": 737,
+    "h": 412,
+    "origin": "10/3.jpg",
+    "originSize": [
+      737,
+      412
+    ]
+  },
+  {
+    "slug": "campo-potro",
+    "src": "/assets/archive/campo-potro.webp",
+    "thumb": "/assets/archive/campo-potro@sm.webp",
+    "w": 1195,
+    "h": 829,
+    "origin": "9/4.jpg",
+    "originSize": [
+      1195,
+      829
+    ]
+  },
+  {
+    "slug": "doc-carta",
+    "src": "/assets/archive/doc-carta.webp",
+    "thumb": "/assets/archive/doc-carta@sm.webp",
+    "w": 1800,
+    "h": 1386,
+    "origin": "1-3/21.jpg",
+    "originSize": [
+      3235,
+      2491
+    ]
+  },
+  {
+    "slug": "doc-carta-larga",
+    "src": "/assets/archive/doc-carta-larga.webp",
+    "thumb": "/assets/archive/doc-carta-larga@sm.webp",
+    "w": 1600,
+    "h": 2461,
+    "origin": "1-3/24.jpg",
+    "originSize": [
+      3348,
+      5149
+    ]
+  },
+  {
+    "slug": "doc-libreta",
+    "src": "/assets/archive/doc-libreta.webp",
+    "thumb": "/assets/archive/doc-libreta@sm.webp",
+    "w": 1400,
+    "h": 1883,
+    "origin": "1-3/3.jpg",
+    "originSize": [
+      1876,
+      2523
+    ]
+  },
+  {
+    "slug": "doc-manuscrito",
+    "src": "/assets/archive/doc-manuscrito.webp",
+    "thumb": "/assets/archive/doc-manuscrito@sm.webp",
+    "w": 1600,
+    "h": 2431,
+    "origin": "5/5.jpg",
+    "originSize": [
+      3403,
+      5170
+    ]
+  },
+  {
+    "slug": "doc-pliego",
+    "src": "/assets/archive/doc-pliego.webp",
+    "thumb": "/assets/archive/doc-pliego@sm.webp",
+    "w": 1800,
+    "h": 1386,
+    "origin": "5/6.jpg",
+    "originSize": [
+      3253,
+      2504
+    ]
+  },
+  {
+    "slug": "doc-oficial",
+    "src": "/assets/archive/doc-oficial.webp",
+    "thumb": "/assets/archive/doc-oficial@sm.webp",
+    "w": 1800,
+    "h": 1077,
+    "origin": "5/3.jpg",
+    "originSize": [
+      2473,
+      1479
+    ]
+  },
+  {
+    "slug": "doc-ledger",
+    "src": "/assets/archive/doc-ledger.webp",
+    "thumb": "/assets/archive/doc-ledger@sm.webp",
+    "w": 1800,
+    "h": 1303,
+    "origin": "31/2.jpg",
+    "originSize": [
+      2869,
+      2077
+    ]
+  },
+  {
+    "slug": "doc-mecanografiado",
+    "src": "/assets/archive/doc-mecanografiado.webp",
+    "thumb": "/assets/archive/doc-mecanografiado@sm.webp",
+    "w": 1400,
+    "h": 1841,
+    "origin": "6/6.jpg",
+    "originSize": [
+      2389,
+      3141
+    ]
+  },
+  {
+    "slug": "doc-cuaderno",
+    "src": "/assets/archive/doc-cuaderno.webp",
+    "thumb": "/assets/archive/doc-cuaderno@sm.webp",
+    "w": 1200,
+    "h": 1550,
+    "origin": "6/7.jpg",
+    "originSize": [
+      1974,
+      2550
+    ]
+  },
+  {
+    "slug": "doc-recorte-boda",
+    "src": "/assets/archive/doc-recorte-boda.webp",
+    "thumb": "/assets/archive/doc-recorte-boda@sm.webp",
+    "w": 1200,
+    "h": 553,
+    "origin": "5/15.jpg",
+    "originSize": [
+      1369,
+      631
+    ]
+  },
+  {
+    "slug": "doc-prensa",
+    "src": "/assets/archive/doc-prensa.webp",
+    "thumb": "/assets/archive/doc-prensa@sm.webp",
+    "w": 472,
+    "h": 590,
+    "origin": "29/5.jpg",
+    "originSize": [
+      472,
+      590
+    ]
+  },
+  {
+    "slug": "obj-maquina",
+    "src": "/assets/archive/obj-maquina.webp",
+    "thumb": "/assets/archive/obj-maquina@sm.webp",
+    "w": 1400,
+    "h": 1140,
+    "origin": "9/1.jpeg",
+    "originSize": [
+      1474,
+      1200
+    ]
+  },
+  {
+    "slug": "obj-maquina-manos",
+    "src": "/assets/archive/obj-maquina-manos.webp",
+    "thumb": "/assets/archive/obj-maquina-manos@sm.webp",
+    "w": 1400,
+    "h": 1050,
+    "origin": "1-3/22.jpeg",
+    "originSize": [
+      1536,
+      1152
+    ]
+  },
+  {
+    "slug": "obj-baul",
+    "src": "/assets/archive/obj-baul.webp",
+    "thumb": "/assets/archive/obj-baul@sm.webp",
+    "w": 1500,
+    "h": 1125,
+    "origin": "1-3/17.jpeg",
+    "originSize": [
+      1600,
+      1200
+    ]
+  },
+  {
+    "slug": "obj-baul-lateral",
+    "src": "/assets/archive/obj-baul-lateral.webp",
+    "thumb": "/assets/archive/obj-baul-lateral@sm.webp",
+    "w": 1500,
+    "h": 1125,
+    "origin": "12/5.jpeg",
+    "originSize": [
+      1600,
+      1200
+    ]
+  },
+  {
+    "slug": "obj-singer",
+    "src": "/assets/archive/obj-singer.webp",
+    "thumb": "/assets/archive/obj-singer@sm.webp",
+    "w": 1382,
+    "h": 1200,
+    "origin": "1-3/32.jpeg",
+    "originSize": [
+      1382,
+      1200
+    ]
+  },
+  {
+    "slug": "obj-rosario",
+    "src": "/assets/archive/obj-rosario.webp",
+    "thumb": "/assets/archive/obj-rosario@sm.webp",
+    "w": 1400,
+    "h": 1146,
+    "origin": "1-3/19.jpeg",
+    "originSize": [
+      1459,
+      1194
+    ]
+  },
+  {
+    "slug": "obj-rosario-biblia",
+    "src": "/assets/archive/obj-rosario-biblia.webp",
+    "thumb": "/assets/archive/obj-rosario-biblia@sm.webp",
+    "w": 1300,
+    "h": 975,
+    "origin": "9/8.jpeg",
+    "originSize": [
+      1382,
+      1037
+    ]
+  },
+  {
+    "slug": "obj-arana",
+    "src": "/assets/archive/obj-arana.webp",
+    "thumb": "/assets/archive/obj-arana@sm.webp",
+    "w": 1400,
+    "h": 1085,
+    "origin": "12/8.jpeg",
+    "originSize": [
+      1548,
+      1200
+    ]
+  },
+  {
+    "slug": "obj-arana-salon",
+    "src": "/assets/archive/obj-arana-salon.webp",
+    "thumb": "/assets/archive/obj-arana-salon@sm.webp",
+    "w": 1100,
+    "h": 1125,
+    "origin": "13/6.jpeg",
+    "originSize": [
+      1173,
+      1200
+    ]
+  },
+  {
+    "slug": "obj-lentes-libro",
+    "src": "/assets/archive/obj-lentes-libro.webp",
+    "thumb": "/assets/archive/obj-lentes-libro@sm.webp",
+    "w": 1500,
+    "h": 951,
+    "origin": "1-3/31.jpeg",
+    "originSize": [
+      1600,
+      1014
+    ]
+  },
+  {
+    "slug": "obj-anillo",
+    "src": "/assets/archive/obj-anillo.webp",
+    "thumb": "/assets/archive/obj-anillo@sm.webp",
+    "w": 1300,
+    "h": 891,
+    "origin": "5/13.jpeg",
+    "originSize": [
+      1347,
+      923
+    ]
+  },
+  {
+    "slug": "obj-candelabro",
+    "src": "/assets/archive/obj-candelabro.webp",
+    "thumb": "/assets/archive/obj-candelabro@sm.webp",
+    "w": 1200,
+    "h": 1572,
+    "origin": "1-3/4.jpeg",
+    "originSize": [
+      1221,
+      1600
+    ]
+  },
+  {
+    "slug": "obj-encaje",
+    "src": "/assets/archive/obj-encaje.webp",
+    "thumb": "/assets/archive/obj-encaje@sm.webp",
+    "w": 757,
+    "h": 450,
+    "origin": "13/4.jpg",
+    "originSize": [
+      757,
+      450
+    ]
+  },
+  {
+    "slug": "obj-libro-floral",
+    "src": "/assets/archive/obj-libro-floral.webp",
+    "thumb": "/assets/archive/obj-libro-floral@sm.webp",
+    "w": 1500,
+    "h": 1981,
+    "origin": "31/5.jpg",
+    "originSize": [
+      1734,
+      2290
+    ]
+  },
+  {
+    "slug": "obj-santo",
+    "src": "/assets/archive/obj-santo.webp",
+    "thumb": "/assets/archive/obj-santo@sm.webp",
+    "w": 1200,
+    "h": 1867,
+    "origin": "30/12.jpg",
+    "originSize": [
+      1316,
+      2048
+    ]
+  },
+  {
+    "slug": "obj-busto",
+    "src": "/assets/archive/obj-busto.webp",
+    "thumb": "/assets/archive/obj-busto@sm.webp",
+    "w": 1600,
+    "h": 1197,
+    "origin": "30/1.jpg",
+    "originSize": [
+      2032,
+      1520
+    ]
+  }
+]
