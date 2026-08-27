@@ -2766,15 +2766,11 @@
       canvasTexture.height = 1152;
       const ctx = canvasTexture.getContext("2d");
 
-      if (coverAtlasReady) {
-        const [sourceX, sourceY, sourceWidth, sourceHeight] = COVER_CROPS[BOOKS.indexOf(book)];
-        if (book.id === "margarita") {
-          // La portada visible es una página real del PDF de muestra.
-          ctx.drawImage(coverAtlasImage, 0, 0, canvasTexture.width, canvasTexture.height);
-        } else {
-          const [sourceX, sourceY, sourceWidth, sourceHeight] = COVER_CROPS[BOOKS.indexOf(book)];
-          ctx.drawImage(coverAtlasImage, sourceX, sourceY, sourceWidth, sourceHeight, 0, 0, canvasTexture.width, canvasTexture.height);
-        }
+      if (coverAtlasReady && book.id === "margarita") {
+        // Sólo Margarita usa la portada real del PDF «De colores y sombras».
+        // Los demás libros reciben una portada editorial propia; nunca se
+        // recorta ni se estira esta imagen para ellos.
+        ctx.drawImage(coverAtlasImage, 0, 0, canvasTexture.width, canvasTexture.height);
 
         const edgeShade = ctx.createLinearGradient(0, 0, canvasTexture.width, 0);
         edgeShade.addColorStop(0, "rgba(0,0,0,0.16)");
@@ -2786,6 +2782,34 @@
 
         return configureCanvasTexture(new THREE.CanvasTexture(canvasTexture));
       }
+
+      // Portadas conceptuales: textura textil, marco fino y tipografía
+      // editorial. No son páginas del PDF ni una imagen deformada.
+      ctx.fillStyle = book.color;
+      ctx.fillRect(0, 0, canvasTexture.width, canvasTexture.height);
+      const coverGradient = ctx.createLinearGradient(0, 0, canvasTexture.width, canvasTexture.height);
+      coverGradient.addColorStop(0, "rgba(255,255,255,0.10)");
+      coverGradient.addColorStop(0.5, "rgba(255,255,255,0.015)");
+      coverGradient.addColorStop(1, "rgba(0,0,0,0.28)");
+      ctx.fillStyle = coverGradient;
+      ctx.fillRect(0, 0, canvasTexture.width, canvasTexture.height);
+      ctx.strokeStyle = book.foil;
+      ctx.globalAlpha = 0.72;
+      ctx.lineWidth = 2;
+      ctx.strokeRect(42, 42, canvasTexture.width - 84, canvasTexture.height - 84);
+      ctx.globalAlpha = 1;
+      ctx.fillStyle = book.foil;
+      ctx.textAlign = "center";
+      ctx.font = '500 22px Inter, Arial, sans-serif';
+      ctx.fillText(`EL SUSURRO DEL TIEMPO · ${book.roman}`, canvasTexture.width / 2, 130);
+      ctx.font = `400 ${book.title.length > 10 ? 48 : 62}px "Iowan Old Style", Baskerville, Georgia, serif`;
+      drawWrappedCanvasText(ctx, book.title, canvasTexture.width / 2, 500, 18, 60, 2);
+      ctx.font = '400 20px "Iowan Old Style", Baskerville, Georgia, serif';
+      ctx.globalAlpha = 0.82;
+      drawWrappedCanvasText(ctx, book.note, canvasTexture.width / 2, 720, 34, 28, 4);
+      ctx.textAlign = "left";
+      ctx.globalAlpha = 1;
+      return configureCanvasTexture(new THREE.CanvasTexture(canvasTexture));
 
       const random = seededRandom(hashSeed(book.id) + book.seed);
 
