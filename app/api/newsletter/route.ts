@@ -57,11 +57,11 @@ export async function POST(req: Request) {
         // ── 3. Reenviar al correo del proyecto vía Resend ─────────────────────
         const apiKey = process.env.RESEND_API_KEY;
         if (apiKey) {
-            const resend = new Resend(apiKey);
-            await resend.emails.send({
-                from: "El Susurro del Tiempo <suscriptores@elsusurrodeltiempo.com>",
-                to: ["elsusurrodeltiempo@proton.me"],
-                subject: "🎙️ Nuevo suscriptor — El Susurro del Tiempo",
+          const resend = new Resend(apiKey);
+          await resend.emails.send({
+            from: "El Susurro del Tiempo <onboarding@resend.dev>",
+            to: ["elsusurrodeltiempo@proton.me"],
+            subject: "🎙️ Nuevo suscriptor — El Susurro del Tiempo",
                 html: `
           <div style="font-family:Georgia,serif;max-width:480px;margin:0 auto;">
             <h2 style="color:#7A3B43;">🎙️ Nuevo suscriptor</h2>

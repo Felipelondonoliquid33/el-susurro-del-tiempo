@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, EB_Garamond } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import CustomCursor from "@/components/fx/CustomCursor";
 import ParchmentOverlay from "@/components/fx/ParchmentOverlay";
 import { Preloader } from "@/components/fx/Preloader";
@@ -36,6 +37,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${cormorant.variable} ${ebGaramond.variable}`}>
       <body>
+        <Analytics />
         <ParchmentOverlay />
         <CustomCursor />
         {/* El telón envuelve la página: las secciones consultan `useAppListo()`
