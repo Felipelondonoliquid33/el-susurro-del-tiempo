@@ -1,14 +1,14 @@
 import SmoothScroll from "@/components/fx/SmoothScroll";
+import ChapterList from "@/components/sections/ChapterList";
+import Foco from "@/components/sections/Foco";
+import Footer from "@/components/sections/Footer";
+import Gallery from "@/components/sections/Gallery";
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
-import Gallery from "@/components/sections/Gallery";
-import Manifesto from "@/components/sections/Manifesto";
-import Reliquias from "@/components/sections/Reliquias";
-import Foco from "@/components/sections/Foco";
-import ChapterList from "@/components/sections/ChapterList";
 import LibroMuestra from "@/components/sections/LibroMuestra";
+import Manifesto from "@/components/sections/Manifesto";
 import Passages from "@/components/sections/Passages";
-import Footer from "@/components/sections/Footer";
+import Reliquias from "@/components/sections/Reliquias";
 
 /**
  * Recorrido de la página.

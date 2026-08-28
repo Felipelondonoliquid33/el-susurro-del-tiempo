@@ -187,12 +187,11 @@ export default function Footer() {
             })}
           </ul>
 
-          {/* El formulario envía a la API real. Los emails se guardan en
-              `data/suscriptores.json` y puedes consultarlos cuando quieras.
-              Cuando configures Resend/Brevo, se reenviarán automáticamente
-              a tu correo. */}
+          {/* Formulario rediseñado — tarjeta de suscripción con relieve,
+              el botón responde al hover con un destello de foil y al hacer
+              clic se repliega para mostrar un mensaje de confirmación. */}
           <form
-            className="footer-reveal mt-12"
+            className="footer-reveal mt-14"
             onSubmit={async (e) => {
               e.preventDefault();
               const form = e.currentTarget;
@@ -216,34 +215,84 @@ export default function Footer() {
               }
             }}
           >
-            <label htmlFor="newsletter-email" className="text-sm text-parchment/80">
-              Recibe noticias del proyecto
-            </label>
-            <div ref={magnet} className="mt-3 flex flex-col gap-3 py-2 sm:flex-row sm:items-center">
-              <input
-                id="newsletter-email"
-                name="email"
-                type="email"
-                required
-                autoComplete="email"
-                placeholder="tu@correo.com"
-                className="w-full border-b border-parchment/55 bg-transparent py-3 text-parchment transition-colors placeholder:text-parchment/60 focus:border-sakura focus:outline-none"
-              />
-              <button
-                data-magnet
-                type="submit"
-                disabled={sent}
-                className="shrink-0 border border-parchment/55 px-6 py-3 text-xs uppercase tracking-[0.25em] transition-colors duration-300 hover:border-sakura hover:text-sakura disabled:opacity-60"
-                style={{ willChange: "transform" }}
-              >
-                {sent ? "Gracias" : "Unirme"}
-              </button>
+            <div className="relative rounded-sm border border-parchment/20 bg-parchment/[0.03] p-6 backdrop-blur-sm md:p-8">
+              {/* Esquina decorativa — el detalle del archivo. */}
+              <span className="pointer-events-none absolute -top-px left-8 h-px w-12 bg-sakura/70" />
+              <span className="pointer-events-none absolute -right-px top-8 flex h-1 w-1 items-center justify-center">
+                <span className="inline-block h-2 w-2 rotate-45 border border-sakura/40" />
+              </span>
+
+              <div className="flex items-start gap-3">
+                <div className="mt-1 shrink-0">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                    <rect x="1" y="3" width="16" height="12" rx="2" stroke="#E8C5C8" strokeWidth="1.2" />
+                    <path d="M2 4.5 9 10l7-5.5" stroke="#E8C5C8" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <p className="font-display text-base italic leading-snug text-parchment/90">
+                    Recibe noticias del proyecto
+                  </p>
+                  <p className="mt-1 text-[11px] leading-relaxed tracking-wide text-parchment/50">
+                    Sin spam, solo el trabajo callado del archivo.
+                  </p>
+                </div>
+              </div>
+
+              <div ref={magnet} className="relative mt-6 flex flex-col gap-3 sm:flex-row">
+                <div className="group relative flex-1">
+                  <input
+                    id="newsletter-email"
+                    name="email"
+                    type="email"
+                    required
+                    autoComplete="email"
+                    placeholder="tu@correo.com"
+                    className="w-full border-b border-parchment/30 bg-transparent py-3.5 pl-0 pr-2 text-sm text-parchment placeholder:text-parchment/40 transition-all duration-300 focus:border-sakura focus:outline-none focus:ring-0"
+                  />
+                  <span className="pointer-events-none absolute bottom-0 left-0 h-px w-0 bg-sakura transition-all duration-500 group-focus-within:w-full" />
+                </div>
+                <button
+                  data-magnet
+                  type="submit"
+                  disabled={sent}
+                  className="group relative shrink-0 overflow-hidden border border-parchment/30 px-7 py-3.5 text-xs uppercase tracking-[0.28em] text-parchment transition-all duration-500 hover:border-sakura hover:text-sakura disabled:opacity-50"
+                  style={{ willChange: "transform" }}
+                >
+                  {/* Destello foil en hover. */}
+                  <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-sakura/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                  <span className="relative z-10 flex items-center gap-2">
+                    {sent ? (
+                      <>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                          <path d="M2 7.5 5.5 11 12 3" stroke="#E8C5C8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                        Gracias
+                      </>
+                    ) : (
+                      <>
+                        Unirme
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">
+                          <path d="M7 1v12M1 7h12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+                        </svg>
+                      </>
+                    )}
+                  </span>
+                </button>
+              </div>
+
+              {sent && (
+                <div className="mt-5 flex items-center gap-3 rounded-sm border border-sakura/20 bg-sakura/[0.04] px-4 py-3">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" className="shrink-0">
+                    <circle cx="8" cy="8" r="6.5" stroke="#E8C5C8" strokeWidth="1.2" />
+                    <path d="M5 8.5 7 10.5 11 6" stroke="#E8C5C8" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <p className="text-sm text-sakura/90" role="status">
+                    Te escribiremos pronto a tu correo.
+                  </p>
+                </div>
+              )}
             </div>
-            {sent && (
-              <p className="mt-3 text-sm text-sakura" role="status">
-                ¡Gracias! Te escribiremos pronto a tu correo.
-              </p>
-            )}
           </form>
         </div>
 
