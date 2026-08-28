@@ -12,25 +12,25 @@ const chapters = [
   {
     num: "01",
     name: "María Eugenia — 84 años",
-    desc: "De la sierra a la ciudad: sesenta años de oficio, radio y memoria.",
+    desc: "Llegué a Medellín con una mano atrás y otra adelante, como dicen. Venía del campo, con las uñas gastadas de arrancar café y una berraquera que una no sabe que tiene hasta que la necesita. Mi primer trabajo fue en una emisora chiquitica, de esas que transmiten desde la sala de la casa, con el micrófono colgando de un clavo y el control de sonido que era una perilla que chirriaba. Don Rodrigo, el director, me puso frente a ese micrófono y me dijo: “Lea, mija.” Yo, toda nerviosa, empecé a leer el noticiero. Pero a la mitá se me secó la boca. Las palabras se me quedaron pegadas en la garganta como si fueran de papel periódico mojado. Me quedé muda. El silencio era tan profundo que se oían hasta las moscas. Don Rodrigo me miró, sonrió con esa sonrisa que él tenía, y dijo al aire: “Señores, la señorita está teniendo su bautizo de fuego.” La gente empezó a llamar a la emisora para decirme que no me preocupara, que a todos nos pasaba, que siguiera adelante. Esa noche lloré. Pero al otro día volví. Y no paré hasta cumplir sesenta años de oficio. La radio me enseñó que uno no nace sabiendo: uno se va haciendo, a punta de tropezones y de ganas. Y que el micrófono, como la vida, perdona si uno habla con el corazón.",
     retrato: RETRATOS.senora,
   },
   {
     num: "02",
     name: "Rafael — 79 años",
-    desc: "El relojero que reparó el tiempo de tres generaciones.",
+    desc: "El primer reloj que me trajeron pa' arreglar fue un despertador viejo, de esos con carátula amarilla y manecilas doradas que parecían de oro. Mi papá lo trajo a la casa envuelto en un trapo y me dijo: “Mire a ver si puede hacer que funcione.” Yo tenía doce años y no sabía ni por dónde se abría esa vaina. Pero me senté en la mesa del comedor, lo pusé boca abajo y empecé a desarmarlo pieza por pieza. Las fui poniendo en orden sobre un pañuelo blanco, como quien hace un altar. Mi mamá casi me mata cuando vió los tornilos regados por toda la mesa. Pero mi papá la calmó: “Déjelo quieto, que esto es cosa de hombresh.” Pasé tres días armando y desarmando esa máquina, entendiendo cómo encajaba cada pieza, como si estuviera aprendiendo el lenguaje del tiempo. Al cuarto día, cuando el segundero empezó a caminar otra ves… uy, qué cosa tan berraca. Ese tictac sonaba como si el tiempo mismo me estuviera diciendo: “Bien echo, Rafael, bien echo.” Sesenta años después, todavía siento lo mismo cada ves que un reloj vuelve a la vida. Y es que uno no arregla solamento mecanismos. Uno arregla recuerdos.",
     retrato: RETRATOS.joven,
   },
   {
     num: "03",
     name: "Margarita — 76 años",
-    desc: "Pinceles, gatos y perros: una casa entera convertida en taller.",
+    desc: "Mi taller no es un taller: es mi casa entera. Los pinceles están por todas partes, en la cocina, en el baño, en la mesita de noche. Los gatos se acuestan sobre los lienzos aún mojados y me miran con cara de “esa mancha no quedó bien.” Una vez una de mis perritas, la Chila, cogió el pincel con la boca y se pusó a pintar ella también. Rayó media tela, pero quedó tan bonito que no lo borré. Ese cuadro está colgado en la sala y todo el mundo pregunta quién lo hiso. Yo digo que fue la Chila, pero nadie me cree. Llevo más de cuarenta años pintando y todavía no sé cuál es mi mejor obra. Unas veces son los bodegones, otras son los retratos, otras son esos paisajes que me invento cuando no me quiero acordar de nada. Pintar es como respirar: si lo dejo de hacer, me ahogo. Y aquí, entre gatos, perros, pinceles y el olor a óleo y aguarrás, he encontrado lo que mucha gente busca toda la vida y nunca encuentrra: la paz. Aunque sea una paz un poco alborotada.",
     retrato: RETRATOS.dosMujeres,
   },
   {
     num: "04",
     name: "Antonio — 77 años",
-    desc: "Siempre me gustó montar a caballo. Con los amigotes, todos los años nos íbamos de cabalgata; eso era cuando el cuerpo aguantaba y el aguardiente bajaba como agüita. En una de esas jornadas, sintiéndome el jinete más berraco y al calor de los tragos, ni cuenta me di de que la cincha se soltó. El mundo se me puso al revés, y no lo digo en sentido figurado: en un parpadeo pasé de dominar el paisaje de las montañas de Fredonia a quedar patas pa' arriba, con la cabeza balanceándose peligrosamente entre las patas de la yegua. Yo veía los cascos del animal a centímetros de mi nariz. Así que, con la dignidad más arrastrada que el sombrero aguadeño que lucía orgullosamente (regalo de mi hijo mayor), pude confirmar dos verdades: que definitivamente esa yegua era una santa y que el aguardiente, ciertamente, tiene la magia de hacerle ver a uno la vida desde otra perspectiva... ¡Eh, ave maría!",
+    desc: "Siempre me gustó montar a caballo. Con los amigotes, todos los años nos íbamos de cabalgata; eso era cuando el cuerpo aguantaba y el aguardiente bajaba como agüita. En una de esas jornadas, sintiéndome el jinete más berraco y al calor de los tragos, ni cuenta me di de que la cincha se soltó. El mundo se me puso al revés, y no lo digo en sentido figurado: en un parpadeo pasé de dominar el paisaje de las montañas de Fredonia a quedar patas pa' arriba, con la cabeza balanceándose peligrosamente entre las patas de la yegua. Yo veía los cascos del animal a centímetros de mi nariz. Así que, con la dignidad más arrastrada que el sombrero aguadeño que lucía orgullosamente (regalo de mi hijjo mayor), pude confirmar dos verdades: que definitivamente esa yegua era una santa y que el aguardiente, ciertamente, tiene la magia de hacerle ver a uno la vida desde otra perespectiva… ¡Eh, ave maría!",
     retrato: RETRATOS.dosHombres,
   },
 ];
