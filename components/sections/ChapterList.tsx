@@ -120,31 +120,28 @@ export default function ChapterList() {
   );
 
   return (
-    <section ref={root} id="capitulos" className="relative mx-auto max-w-6xl px-6 py-24 md:py-28">
+    <section ref={root} id="capitulos" className="relative mx-auto max-w-7xl px-6 py-24 md:px-12 md:py-28">
       <p className="text-xs uppercase tracking-[0.35em] text-slate-mute">Relatos</p>
       <h2 className="mt-4 font-display text-4xl font-light italic text-sumi md:text-5xl">
         Capítulos del tiempo
       </h2>
-      {/* Sin flecha ni cursor de enlace: estas filas no llevan a ninguna parte
-          y prometerlo era una mentira de interfaz. Lo que sí dan al pasar por
-          encima —el retrato de esa persona— lo cumplen. */}
+      {/* Cada fila es número + contenido a ancho completo. El retrato hover
+          se superpone desde la derecha sin robarle espacio al texto. */}
       <ul className="chapters-list mt-16">
         {chapters.map((c) => (
           <li
             key={c.num}
-            className="chapter-row relative grid grid-cols-[auto_1fr] items-start gap-4 border-t border-sumi/30 py-6 last:border-b md:grid-cols-[auto_1fr_1fr] md:items-center md:gap-6 md:py-8"
+            className="chapter-row relative grid grid-cols-[auto_1fr] items-start gap-4 border-t border-sumi/30 py-8 last:border-b md:gap-8 md:py-10"
             style={{ willChange: "transform, opacity" }}
           >
             <span className="font-display text-xs tracking-[0.3em] text-slate-mute">
               {c.num}
             </span>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-4 md:pr-56">
               <span className="chapter-name font-display text-2xl font-light text-sumi md:text-4xl">
                 {c.name}
               </span>
-              {/* En móvil la descripción es visible y el retrato aparece
-                  como una miniatura alineada. En escritorio la descripción
-                  convive con el hover del retrato. */}
+              {/* En móvil retrato + descripción visibles siempre */}
               <div className="flex items-start gap-4 md:hidden">
                 <img
                   src={c.retrato.thumb}
@@ -152,16 +149,19 @@ export default function ChapterList() {
                   loading="lazy"
                   className="mt-1 h-24 w-16 shrink-0 rounded object-cover shadow-[0_8px_20px_-10px_rgba(43,43,42,0.4)]"
                 />
-                <p className="text-sm leading-relaxed text-sumi/70">{c.desc}</p>
+                <p className="text-base leading-relaxed text-sumi/70">{c.desc}</p>
               </div>
-              <p className="hidden text-sm leading-relaxed text-sumi/70 md:block lg:pr-56">{c.desc}</p>
+              {/* En escritorio descripción ocupa todo el ancho disponible;
+                  el retrato aparece en hover superpuesto desde la derecha. */}
+              <p className="hidden text-base leading-[1.8] text-sumi/70 md:block md:text-lg">
+                {c.desc}
+              </p>
             </div>
 
-            {/* Retrato de archivo, no una tarjeta de color vacía. Anclado
-                dentro del contenedor: colgado de `left-full` se salía de la
-                pantalla en cualquier portátil de 1440px. */}
+            {/* Retrato hover: flota a la derecha, no comprime el texto.
+                Si la ventana es angosta se oculta para no salirse. */}
             <figure
-              className="chapter-card pointer-events-none absolute right-0 top-1/2 z-20 hidden w-48 -translate-y-1/2 lg:block"
+              className="chapter-card pointer-events-none absolute right-0 top-1/2 z-20 hidden w-52 -translate-y-1/2 2xl:block"
               aria-hidden="true"
             >
               <div className="chapter-card-inner opacity-0">
