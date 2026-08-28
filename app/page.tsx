@@ -5,7 +5,6 @@ import Footer from "@/components/sections/Footer";
 import Gallery from "@/components/sections/Gallery";
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
-import LibroMuestra from "@/components/sections/LibroMuestra";
 import Manifesto from "@/components/sections/Manifesto";
 import Passages from "@/components/sections/Passages";
 import Reliquias from "@/components/sections/Reliquias";
@@ -15,7 +14,7 @@ import Reliquias from "@/components/sections/Reliquias";
  *
  * Alterna respiro y golpe: pergamino (Hero) → archivo a pantalla completa
  * (Gallery) → color (Manifesto) → vitrina lateral (Reliquias) → voz (Foco) →
- * lectura tranquila (Capítulos, Libro Muestra, Pasajes) → cierre.
+ * lectura tranquila (Capítulos, Pasajes) → cierre.
  */
 export default function Page() {
   return (
@@ -28,7 +27,6 @@ export default function Page() {
         <Reliquias />
         <Foco />
         <ChapterList />
-        <LibroMuestra />
         <Passages />
       </main>
       <Footer />
