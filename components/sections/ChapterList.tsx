@@ -23,7 +23,7 @@ const chapters = [
   },
   {
     num: "03",
-    name: "Margarita — 91 años",
+    name: "Margarita — 76 años",
     desc: "Pinceles, gatos y perros: una casa entera convertida en taller.",
     retrato: RETRATOS.dosMujeres,
   },
@@ -133,18 +133,30 @@ export default function ChapterList() {
         {chapters.map((c) => (
           <li
             key={c.num}
-            className="chapter-row relative grid grid-cols-[auto_1fr] items-center gap-6 border-t border-sumi/30 py-8 last:border-b md:grid-cols-[auto_1fr_1fr]"
+            className="chapter-row relative grid grid-cols-[auto_1fr] items-start gap-4 border-t border-sumi/30 py-6 last:border-b md:grid-cols-[auto_1fr_1fr] md:items-center md:gap-6 md:py-8"
             style={{ willChange: "transform, opacity" }}
           >
             <span className="font-display text-xs tracking-[0.3em] text-slate-mute">
               {c.num}
             </span>
-            <span className="chapter-name font-display text-2xl font-light text-sumi md:text-4xl">
-              {c.name}
-            </span>
-            {/* El reservado a la derecha es el hueco del retrato: sin él la
-                tarjeta caía encima de esta misma frase. */}
-            <p className="hidden leading-relaxed text-sumi/70 md:block lg:pr-56">{c.desc}</p>
+            <div className="flex flex-col gap-3">
+              <span className="chapter-name font-display text-2xl font-light text-sumi md:text-4xl">
+                {c.name}
+              </span>
+              {/* En móvil la descripción es visible y el retrato aparece
+                  como una miniatura alineada. En escritorio la descripción
+                  convive con el hover del retrato. */}
+              <div className="flex items-start gap-4 md:hidden">
+                <img
+                  src={c.retrato.thumb}
+                  alt=""
+                  loading="lazy"
+                  className="mt-1 h-20 w-14 shrink-0 rounded object-cover shadow-[0_8px_20px_-10px_rgba(43,43,42,0.4)]"
+                />
+                <p className="text-sm leading-relaxed text-sumi/70">{c.desc}</p>
+              </div>
+              <p className="hidden text-sm leading-relaxed text-sumi/70 md:block lg:pr-56">{c.desc}</p>
+            </div>
 
             {/* Retrato de archivo, no una tarjeta de color vacía. Anclado
                 dentro del contenedor: colgado de `left-full` se salía de la
