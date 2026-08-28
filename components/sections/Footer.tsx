@@ -16,7 +16,7 @@ const CORREO = "elsusurrodeltiempo@proton.me";
 const CONTACTO = [
   { label: "Escríbenos", value: CORREO, href: `mailto:${CORREO}` },
   { label: "WhatsApp", value: "Escríbenos por WhatsApp", href: "https://wa.me/573102300078" },
-  { label: "Instagram", value: "@elsusurrodeltiempo", href: "https://instagram.com/elsusurrodeltiempo" },
+  { label: "Instagram", value: "@el.susurro.deltiempo", href: "https://instagram.com/el.susurro.deltiempo" },
   { label: "Dónde estamos", value: "Bogotá — y donde haga falta", href: null },
 ];
 
