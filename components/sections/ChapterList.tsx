@@ -30,8 +30,7 @@ const chapters = [
   {
     num: "04",
     name: "Antonio — 77 años",
-    desc: "El tren, la fábrica y la primera radio del barrio.",
-    // Antonio llevaba el retrato de una mujer junto a una silla.
+    desc: "Siempre me gustó montar a caballo. Con los amigotes, todos los años nos íbamos de cabalgata; eso era cuando el cuerpo aguantaba y el aguardiente bajaba como agüita. En una de esas jornadas, sintiéndome el jinete más berraco y al calor de los tragos, ni cuenta me di de que la cincha se soltó. El mundo se me puso al revés, y no lo digo en sentido figurado: en un parpadeo pasé de dominar el paisaje de las montañas de Fredonia a quedar patas pa' arriba, con la cabeza balanceándose peligrosamente entre las patas de la yegua. Yo veía los cascos del animal a centímetros de mi nariz. Así que, con la dignidad más arrastrada que el sombrero aguadeño que lucía orgullosamente (regalo de mi hijo mayor), pude confirmar dos verdades: que definitivamente esa yegua era una santa y que el aguardiente, ciertamente, tiene la magia de hacerle ver a uno la vida desde otra perspectiva... ¡Eh, ave maría!",
     retrato: RETRATOS.dosHombres,
   },
 ];
@@ -151,7 +150,7 @@ export default function ChapterList() {
                   src={c.retrato.thumb}
                   alt=""
                   loading="lazy"
-                  className="mt-1 h-20 w-14 shrink-0 rounded object-cover shadow-[0_8px_20px_-10px_rgba(43,43,42,0.4)]"
+                  className="mt-1 h-24 w-16 shrink-0 rounded object-cover shadow-[0_8px_20px_-10px_rgba(43,43,42,0.4)]"
                 />
                 <p className="text-sm leading-relaxed text-sumi/70">{c.desc}</p>
               </div>
