@@ -10,7 +10,7 @@ html = html.replace(/href="assets\//g, 'href="/shelf/assets/');
 
 // Reemplazar title
 html = html.replace(
-  "<title>Working Volumes — Seven Tools for Making</title>,
+    "<title>Working Volumes — Seven Tools for Making</title>,
   "<title>El Susurro del Tiempo — Nuestros libros</title>"
 );
 

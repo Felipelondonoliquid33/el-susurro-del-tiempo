@@ -1,10 +1,10 @@
 "use client";
 
-import { useRef } from "react";
+import { RETRATOS } from "@/lib/archive";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { RETRATOS } from "@/lib/archive";
+import { useRef } from "react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 

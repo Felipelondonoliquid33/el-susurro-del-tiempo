@@ -34,48 +34,48 @@ export async function POST(req: Request) {
         }
 
         // ── 2. Almacenar localmente ───────────────────────────────────────────
-    // En local se guarda en data/suscriptores.json.
-    // En Vercel (producción) se guarda en /tmp/ porque el filesystem
-    // principal es de solo lectura. Los datos en /tmp son efímeros,
-    // pero el email vía Resend es el respaldo permanente.
-    const isVercel = process.env.VERCEL === "1";
-    const dataDir = path.join(isVercel ? "/tmp" : process.cwd(), "data");
-    const archivo = path.join(dataDir, "suscriptores.json");
+        // En local se guarda en data/suscriptores.json.
+        // En Vercel (producción) se guarda en /tmp/ porque el filesystem
+        // principal es de solo lectura. Los datos en /tmp son efímeros,
+        // pero el email vía Resend es el respaldo permanente.
+        const isVercel = process.env.VERCEL === "1";
+        const dataDir = path.join(isVercel ? "/tmp" : process.cwd(), "data");
+        const archivo = path.join(dataDir, "suscriptores.json");
 
-    try {
-      await fs.mkdir(dataDir, { recursive: true });
-    } catch {
-      // Si no se puede crear el directorio, continuamos igual
-    }
+        try {
+            await fs.mkdir(dataDir, { recursive: true });
+        } catch {
+            // Si no se puede crear el directorio, continuamos igual
+        }
 
-    let suscriptores: Array<{ email: string; fecha: string }> = [];
-    try {
-      const existente = await fs.readFile(archivo, "utf-8");
-      suscriptores = JSON.parse(existente);
-    } catch {
-      // Archivo aún no existe → lista vacía
-    }
+        let suscriptores: Array<{ email: string; fecha: string }> = [];
+        try {
+            const existente = await fs.readFile(archivo, "utf-8");
+            suscriptores = JSON.parse(existente);
+        } catch {
+            // Archivo aún no existe → lista vacía
+        }
 
-    // Evitar duplicados
-    const yaExiste = suscriptores.some((s) => s.email === emailLimpio);
-    if (!yaExiste) {
-      suscriptores.push({ email: emailLimpio, fecha: new Date().toISOString() });
-      try {
-        await fs.writeFile(archivo, JSON.stringify(suscriptores, null, 2));
-      } catch {
-        // En Vercel el write puede fallar, pero el email se envía igual
-      }
-    }
+        // Evitar duplicados
+        const yaExiste = suscriptores.some((s) => s.email === emailLimpio);
+        if (!yaExiste) {
+            suscriptores.push({ email: emailLimpio, fecha: new Date().toISOString() });
+            try {
+                await fs.writeFile(archivo, JSON.stringify(suscriptores, null, 2));
+            } catch {
+                // En Vercel el write puede fallar, pero el email se envía igual
+            }
+        }
 
         // ── 3. Reenviar al correo del proyecto vía Resend ─────────────────────
-    const apiKey = process.env.RESEND_API_KEY;
-    if (apiKey) {
-      const resend = new Resend(apiKey);
-      await resend.emails.send({
-        from: "El Susurro del Tiempo <onboarding@resend.dev>",
-        to: ["elsusurrodeltiempo@proton.me"],
-        subject: "🎙️ Nuevo suscriptor — El Susurro del Tiempo",
-        html: `
+        const apiKey = process.env.RESEND_API_KEY;
+        if (apiKey) {
+            const resend = new Resend(apiKey);
+            await resend.emails.send({
+                from: "El Susurro del Tiempo <onboarding@resend.dev>",
+                to: ["elsusurrodeltiempo@proton.me"],
+                subject: "🎙️ Nuevo suscriptor — El Susurro del Tiempo",
+                html: `
           <div style="font-family:Georgia,serif;max-width:480px;margin:0 auto;">
             <h2 style="color:#7A3B43;">🎙️ Nuevo suscriptor</h2>
             <p style="font-size:18px;color:#2B2B2A;">
@@ -90,17 +90,17 @@ export async function POST(req: Request) {
             </p>
           </div>
         `,
-      });
-    }
+            });
+        }
 
-    return NextResponse.json({
-      ok: true,
-      mensaje: yaExiste
-        ? "Ya estabas en la lista ✨"
-        : "¡Bienvenido a la comunidad! Te escribiremos pronto.",
-    });
-  } catch (error) {
-    console.error("[Newsletter] Error:", error);
-    return NextResponse.json({ error: "Error interno" }, { status: 500 });
-  }
+        return NextResponse.json({
+            ok: true,
+            mensaje: yaExiste
+                ? "Ya estabas en la lista ✨"
+                : "¡Bienvenido a la comunidad! Te escribiremos pronto.",
+        });
+    } catch (error) {
+        console.error("[Newsletter] Error:", error);
+        return NextResponse.json({ error: "Error interno" }, { status: 500 });
+    }
 }

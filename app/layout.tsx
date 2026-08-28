@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
-import { Cormorant_Garamond, EB_Garamond } from "next/font/google";
-import "./globals.css";
-import { Analytics } from "@vercel/analytics/next";
 import CustomCursor from "@/components/fx/CustomCursor";
 import ParchmentOverlay from "@/components/fx/ParchmentOverlay";
 import { Preloader } from "@/components/fx/Preloader";
+import { Analytics } from "@vercel/analytics/next";
+import type { Metadata } from "next";
+import { Cormorant_Garamond, EB_Garamond } from "next/font/google";
+import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
