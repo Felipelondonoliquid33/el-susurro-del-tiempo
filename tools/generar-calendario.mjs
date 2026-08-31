@@ -28,7 +28,7 @@ const NOM_D = { 1: "Lunes", 2: "Martes", 3: "Miércoles", 4: "Jueves", 5: "Viern
 const MES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
 
 const fechas = [];
-let f = new Date(2026, 7, 28);
+let f = new Date(2026, 7, 28); // empieza viernes 28 (ya publicado)
 while (fechas.length < 33) {
     if (DIAS_PUB.includes(f.getDay())) fechas.push(new Date(f));
     f.setDate(f.getDate() + 1);
@@ -74,7 +74,7 @@ const html = `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta n
 <div class="container"><h2>📋 Tutorial paso a paso</h2></div>
 <div class="tutorial"><ol>
 <li><strong>Abrir Google Drive:</strong> Abre este enlace en tu teléfono o computador:<br> <code>https://drive.google.com/drive/folders/19cSm2eSlsUBF0diS0qFOlQo8cgTlXwNq</code></li>
-<li><strong>Ubicar el video del día:</strong> Busca el archivo con la fecha de hoy (ej: <b>2026-08-28.mp4</b>). Los videos están ordenados por fecha. Ese es el que debes publicar.</li>
+<li><strong>Ubicar el video del día:</strong> Busca el archivo con la fecha de hoy (ej: <b>${entries[0].file}</b>). Los videos están ordenados por fecha. Ese es el que debes publicar.</li>
 <li><strong>Descargar al teléfono:</strong> Toca los tres puntos junto al archivo → <b>Descargar</b>. El video se guarda en tu galería.</li>
 <li><strong>Abrir Instagram:</strong> En el teléfono, abre Instagram. Verifica que estés en <b>@el.susurro.deltiempo</b>.</li>
 <li><strong>Crear Reel:</strong> Pulsa el <b>+</b> → <b>Reel</b>. Selecciona el video que acabas de descargar.</li>
